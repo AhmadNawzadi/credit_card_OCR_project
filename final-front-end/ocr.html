@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Water</title>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+
+    <!-- <link rel="shortcut icon" type="image/png" href="images/aaa.png">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#carouselExampleIndicators">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Projet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </nav> 
+<br>
+<br>
+<br>
+    
+<h2 class="ocr-title">Reconnaissance Optique de Caractères</h2>
+<br>
+<br>
+<br>
+    <!-- OCR -->
+    <div class="flex">
+        <div class="cards">
+            <video id="webcam" autoplay playsinline width="330" height="200"></video>
+            <div>
+                <button href="#" class="btn btn-primary" onclick="openCam()" >Open camera</button>
+                <button href="#" class="btn btn-primary" onclick="takePhoto()" >Take photo</button>
+            </div>
+        </div>
+        <div class="cards">
+            <canvas id="canvas" class="can" width="330" height="200"></canvas>
+
+            <div>
+                <!-- <a download="name.jpg"  href="" id="download-photo" onclick="downloadImage()" class="btn btn-primary ">Confirmer</a>-->
+                <a download="user_imgs/name.jpg"  href="" id="download-photo" onclick="downloadImage()" class="btn btn-primary ">Confirmer</a>
+                <button href="#" class="btn btn-danger" >Annuler</button>
+            </div>
+        </div>
+    </div> 
+
+    <div>
+        <img id="embedImage" alt="Red dot"/>
+        <input id="saveImage" type="button" value="save image" disabled="disabled"/>
+    </div>
+
+
+    <!-- <canvas id="canvas" class="d-none"></canvas>
+    <audio  id="snapSound" src="audio/snap.wav" preload = "auto"></audio> -->
+   
+    
+    <!-- PAGE FOOTER  -->
+    <footer>
+        <div class="container-fluid bottom-footer pt-2">
+            <div class="row">
+                <div class="col-12 text-center copyrights">
+                    <p>Copyrights © 2023 - All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    // Get the elements
+    const webcamElement = document.getElementById('webcam');
+    const canvasElement = document.getElementById('canvas');
+    const snapSoundElement = document.getElementById('snapSound');
+    const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
+
+    function openCam() {
+        webcam.start()
+        .then(result =>{
+            console.log("webcam started");
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    }
+    function takePhoto() {
+        webcam.snap();
+    }
+
+    function closeCam() {
+        webcam.stop()
+    }
+  
+    function downloadImage() {
+        let picture = webcam.snap();
+        document.querySelector('#download-photo').href = picture;
+    }
+
+
+
+  </script>
+
+  <style>
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    /* .can {
+    height: 250px;
+    width: 350px;
+} */
+
+.flex {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    justify-content: space-around;
+}
+.cards {
+    height: 270px;
+    width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 5%;
+}
+.ocr-title {
+    text-align: center;
+}
+.confirme  {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+}
+  </style>
+
+</html>
