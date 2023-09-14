@@ -1,0 +1,126 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>contact_form</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/signup.css">
+</head>
+<body> -->
+
+{%  extends "layout.html" %}
+{%  block content %}
+<div class="signup-up">
+	<div class="signup-content">
+		<h3 class="signup-title">Veuillez créer votre compte</h3>
+		<form class="container" method="POST" action="">
+			{{ form.hidden_tag() }}
+			<div>
+				<div class="row100">
+					<div class="col">
+						{{ form.name.label(class="form-control-label") }}
+						{% if form.name.errors %}
+							{{ form.name(class="form-control form-control-lg is-invalid") }}
+							<div class="invalid-feedback">
+								{% for error in form.name.errors %}
+									<span>{{ error }}</span>
+								{% endfor %}
+							</div>
+						{% else %}
+							{{ form.name(class="form-control form-control-lg") }}
+						{% endif %}
+					</div>
+					<div class="col">
+						{{ form.surname.label(class="form-control-label") }}
+						{% if form.surname.errors %}
+							{{ form.surname(class="form-control form-control-lg is-invalid") }}
+							<div class="invalid-feedback">
+								{% for error in form.surname.errors %}
+									<span>{{ error }}</span>
+								{% endfor %}
+							</div>
+						{% else %}
+							{{ form.surname(class="form-control form-control-lg") }}
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="row100">
+					<div class="col">
+						{{ form.email.label(class="form-control-label") }}
+						{% if form.email.errors %}
+							{{ form.email(class="form-control form-control-lg is-invalid") }}
+							<div class="invalid-feedback">
+								{% for error in form.email.errors %}
+									<span>{{ error }}</span>
+								{% endfor %}
+							</div>
+						{% else %}
+							{{ form.email(class="form-control form-control-lg") }}
+						{% endif %}
+					</div>
+					<div class="col">
+						{{ form.phone.label(class="form-control-label") }}
+						{% if form.phone.errors %}
+							{{ form.phone(class="form-control form-control-lg is-invalid") }}
+							<div class="invalid-feedback">
+								{% for error in form.phone.errors %}
+									<span>{{ error }}</span>
+								{% endfor %}
+							</div>
+						{% else %}
+							{{ form.phone(class="form-control form-control-lg") }}
+						{% endif %}
+					</div>
+				</div>
+				
+				<div class="row100">
+					<div class="col">
+						{{ form.password.label(class="form-control-label") }}
+						{% if form.password.errors %}
+							{{ form.password(class="form-control form-control-lg is-invalid") }}
+							<div class="invalid-feedback">
+								{% for error in form.password.errors %}
+									<span>{{ error }}</span>
+								{% endfor %}
+							</div>
+						{% else %}
+							{{ form.password(class="form-control form-control-lg") }}
+						{% endif %}
+					</div>
+					<div class="col">
+						{{ form.confirm_password.label(class="form-control-label") }}
+						{% if form.confirm_password.errors %}
+							{{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+							<div class="invalid-feedback">
+								{% for error in form.confirm_password.errors %}
+									<span>{{ error }}</span>
+								{% endfor %}
+							</div>
+						{% else %}
+							{{ form.confirm_password(class="form-control form-control-lg") }}
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="row100">
+					<div class="col">
+						
+						<div class="">
+							<button class="btn btn-success" type="submit" value="{{request.form['submit']}}">S'inscrire</button>
+						</div>
+					</div>
+					<div class="">
+						<small class="text-muted">
+							Vous avez déjà un compte? <a class="ml-2" href="{{ url_for('signin') }}">Se connecter</a>
+						</small>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{%  endblock %}
+<!-- 
+</body>
+</html>-->

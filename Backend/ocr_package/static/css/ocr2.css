@@ -1,0 +1,154 @@
+html {
+  height: 100%;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.message {
+  padding-top: 5px;
+  color: red;
+  font-size: 12px;
+  font-weight: 900;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-ocr {
+  position: relative;
+  box-sizing: border-box;
+  height: 35px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.center_img {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.card {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 450px;
+  height: 550px;
+  padding: 30px;
+  border-radius: 30px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgb(255 255 255 / 75%);
+
+}
+.ocr-content {
+    background-image: url('../images/raw.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.ocr-buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ocr-buttons .cancel {
+	background-color: red;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+	text-decoration: none;
+}
+.ocr-buttons a {
+  text-decoration: none;
+}
+
+.forms {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.username {
+  color: white;
+}
+.ocr-title-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 95px 15px 15px;
+}
+.ocr {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ocr-title {
+  color: white;
+  z-index: 11;
+
+}
+#inputfile{
+  text-align: center;
+  margin: 40px auto
+}
+
+
+.h3, h3 {
+  font-size: 20px;
+}
+
+.img-box {
+  height: 270px;
+  border-radius: 10px;
+  width: 400px;
+  border: 1px solid black;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  margin-top: 20px;
+}
+
+#data {
+  border: 1px solid black;
+  height: 148px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 16px auto;
+}
+
+.red{
+  color: red;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

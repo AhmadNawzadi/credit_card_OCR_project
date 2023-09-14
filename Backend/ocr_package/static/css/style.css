@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+/* HOME CSS */
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+}
+.navbar img {
+    height: 40px;
+    width: 100px;
+}
+.nav-item:hover {
+    background:#3498DB;
+    border-radius: 20px 0 20px 0;
+    transition: 0.5s;
+}
+.nav-item {
+    padding-right: .5rem;
+    padding-left: 1rem;
+    
+}
+.carousel-inner img {
+    height: 750px;
+    width: 100%;
+}
+.carousel-caption h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 10px #000;
+    font-size: 25px;
+}
+.carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.carousel-caption a, .btn a {
+   background:#3498DB;
+   padding: 5px 20px;
+   display: inline-block;
+   color: #fff;
+   margin-top: 15px;
+   outline: none;
+   border: 0;
+   text-decoration: none;
+   border-radius: 5%;
+}
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.padding {
+    padding: 100px 70px;
+}
+.color {
+    color: white;
+}
+.carousel-text {
+    font-size: 2rem;
+}
+h2 span {
+    color:#3498DB;
+    font-weight: 900;
+    font-size: 4rem;
+}
+.title h2 {
+    font-size: 3rem;
+    margin-bottom: 70px;
+}
+
+#con {
+    font-size: 3rem;
+}
+.title p {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#title-page {
+   
+    margin: 20px auto;
+}
+
+/* ABOUT */
+.lead {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+/*SERVICES*/
+.services {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services p {
+    text-align: justify;
+    font-weight: 200;
+    color: black;
+}
+.serv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    width: 170px;
+    background-color: #3498DB;
+    border-radius: 50%;
+    overflow: hidden;  
+}
+.serv:hover img {
+    height: 180px;
+    width: 210px;
+    transition: 0.5s;
+}
+.service img {
+    height: 170px;
+    width: 178px;
+
+} 
+.service-text {
+    padding: 20px 0 30px;
+}
+.text h3 {
+    color: #3498DB;
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* FEATURES */
+.feature {
+    padding: 70px 0;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 200px;
+}
+
+/*PORTFOLIO*/
+.inner {
+    overflow: hidden;
+}
+.card {
+    margin-top: 30px;
+}
+.card-text {
+    font-weight: 200;
+}
+
+/*CONTACT PAGE*/
+ .contact {
+    background-color: rgba(0, 0, 0, 0.1); 
+    padding-bottom: 100px;
+} 
+.contact p {
+    font-weight: 200;
+}
+.full-footer{
+  
+    background-color: #243c4f;
+    color: white;
+    font-size: 15px;
+}
+.full-footer h4 {
+    font-size: 15px;
+}
+.top-footer a {
+    color: white;
+    font-size: 10px;
+}
+.top-footer p {
+    color: white;
+    font-size: 10px;
+}
+.bottom-footer{
+    border-top: 1px solid #ddd;
+    background-color: #031b2e;
+    position: fixed;
+    bottom: 0;
+}
+
+.copyrights {
+    color: white;
+}
+
+.white {
+    color: white !important;
+}
+
+.alert-success {
+    position: absolute;
+    margin-top: 70px;
+}
+.alert {
+    position: absolute;
+    top: 60px;
+}
+
+
+/* MEDIA QUERIES  */
+@media (max-width: 1170px) {
+    .carousel-text {
+        font-size: 4rem;
+    }
+}
+@media (max-width: 992px) {
+    .carousel-text {
+        font-size: 3rem;
+    }
+    .carousel-caption p {
+        font-size: 13px;
+    }
+    .services p {
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .carousel-text {
+        font-size: 2rem;
+    }
+    .carousel-caption p {
+        width: 100%;
+        font-size: 10px;
+    }
+    .padding {
+        padding: 80px;
+    }  
+}
+@media (max-width: 576px) {
+    .carousel-text {
+        font-size: 1rem;
+    }
+    .carousel-caption p {
+        font-size: 7px;
+    }
+    .carousel-caption a, .btn {
+        padding: 4px 10px;
+        margin-top: 5px;
+    }
+    .padding {
+        padding: 30px;
+    }
+    .title h2 {
+        font-size: 2rem;
+    }
+    #about h2 {
+        font-size: 2rem;
+    }
+    h2 span {
+        font-weight: 800;
+        font-size: 3rem;
+    }
+    .lead {
+        font-size: 0.8rem;
+    }
+}

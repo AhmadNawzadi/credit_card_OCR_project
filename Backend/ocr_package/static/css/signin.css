@@ -1,0 +1,142 @@
+.signin {
+	background: url('../images/lock2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+
+
+
+}
+.loginBox {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 450px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgb(255 255 255 / 86%);
+	border-radius: 3%;
+    box-shadow: 0px 0px 20px 8px #2845a7;
+	
+
+}
+.user {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/2);
+	left: calc(50% - 50px);
+}
+
+
+.loginBox p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+
+
+}
+
+.loginBox input {
+	width: 100%;
+
+}
+.loginBox input[type="text"],
+.loginBox input[type="password"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	font-size: 14px;
+}
+
+::placeholder {
+	color: rgba(255,255,255,.5);
+}
+.loginBox input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 20px;
+	background: #28a745;
+}
+.loginBox input[type="submit"]:hover {
+	background: #28a745;
+	color: white
+}
+.loginBox a {
+	font-size: 14px;
+}
+.links {
+	display: flex;
+	justify-content: space-between;
+}
+
+.signin-title {
+	color: white;
+	padding-top: 100px;
+    text-align: center;
+}
+.signup-title {
+	color: white;
+	padding: 12px 0 40px;
+    text-align: center;
+}
+
+.form-check {
+    padding-left: 0;
+}
+.pt-3, .py-3 {
+    padding-top: 0 !important;
+}
+
+
+.form-check {
+	position: static; 
+	/* display: block; */
+	/* padding-left: 1.25rem; */
+}
+.logout {
+	background-color: #28a745;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+	text-decoration: none;
+}
+.logout a {
+color: white;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
